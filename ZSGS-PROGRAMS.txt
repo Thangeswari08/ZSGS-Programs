@@ -1,0 +1,357 @@
+import java.util.*;
+class P1
+{
+    public static void main(String[] args)
+    {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the length of  a square :");
+      double side = sc.nextDouble();
+      Double circumference  = 4 * side ;
+      System.out.println("Circumference of the Square :" + circumference);
+    }
+}
+//-----------------------------------------------------------------------------------------------------
+class P2
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the length of a rectangale :");
+    double length = sc.nextDouble();
+    System.out.println("Enter the Width of a rectangale");
+    double width = sc.nextDouble();
+    double Circumference = 2 * (length + width);
+    System.out.println("Circumference of the rectangale :" + Circumference);
+  }
+}
+//-------------------------------------------------------------------------------------------------------
+class P3
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the length of  the radius");
+    double radius = sc.nextDouble();
+    double Circumference = 2 * Math.PI * radius ;
+    System.out.println(" Circumference of the Cylinder :" + Circumference);
+  }
+}
+//------------------------------------------------------------------------------------------------------
+class P4
+{
+  public static void main(String[] args)
+  {
+    int n = 38 ;
+    int Binary = 0 ;int i = 1 ;
+    while(n!=0)
+    {
+       Binary+= n%2*i ;
+       n = n / 2 ; 
+       i*=10 ;
+    }
+    System.out.println("Binary representation :" + Binary);
+
+
+     // Decimal to Octal //
+       n = 38 ;
+       int Octal = 0 ;
+       while (n!=0)
+       {
+        Octal+=n%8*i;
+        n = n / 8 ;
+        i*=10;
+       }
+     System.out.println("Octal representation :" + Octal);
+
+     //Decimal to hexdecimal//
+      n = 38 ;
+      int rem ;
+      String str = "";
+       char hex[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'}; 
+       while ( n > 0 )
+       {
+        rem = n % 16 ;
+        str = hex[rem] + str ;
+        n = n / 16 ;
+       }
+       System.out.println("hexadecimal representation :" + str );
+  }
+}
+//-------------------------------------------------------------------------------------------------------
+class P5
+{
+  public static void main(String[] args)
+  {
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the number :");
+int n = sc.nextInt();
+for(int i = 1 ; i <= 10 ; i++)
+{
+  System.out.println(n + "+" + i + "=" + (n + i) );
+}
+for(int i = 1 ; i <= 10 ; i++)
+{
+  System.out.println(n + "/" + i + "=" + (n/i));
+}
+
+  }
+}
+//-----------------------------------------------------------------------------------------------------
+class P6
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Uppercase lettters (A-Z)");
+  for(char ch = 'A' ; ch <= 'z' ;ch++)
+  {
+    System.out.println(ch + "=" + (int)ch );
+  }
+  System.out.println("Lowercase letters (a-z)");
+  for(char ch = 'a' ; ch <= 'z' ;ch++)
+  {
+     System.out.println(ch + "=" +(int)ch);
+  }
+  }
+}
+//-------------------------------------------------------------------------------------------------------
+class P7
+{
+  public static void main(String[] args)
+  {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the  dividend:");
+      int dividend=sc.nextInt();
+      System.out.println("Enter the Divisor");
+      int divisor=sc.nextInt();
+      int quotient = dividend / divisor ;
+      int remainder = dividend % divisor ;
+      System.out.println("Quotient =" + quotient);
+      System.out.println("Remainder =" + remainder);
+  }
+}
+//-------------------------------------------------------------------------------------------------------
+class P8
+{
+  public static void main(String[] args)
+  {
+    int temp ; 
+    int a = 5 ; int b = 6 ;
+    temp = a ;
+    a = b ; 
+    b = temp ;
+    System.out.println("a = " +a);
+    System.out.println("b = " +b);
+  }
+}
+//-----------------------------------------------------------------------------------------------------
+class P9
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number :");
+    int n = sc.nextInt();
+    if(n % 2 == 0)
+    {
+      System.out.println(n + " is even number.");
+    }else {
+
+    
+    System.out.println(n + " is Odd number.");
+    }
+  }
+
+}
+//-------------------------------------------------------------------------------------------------------
+class P10
+{
+  public static void main(String[] args)
+  {
+    long a = 677777777;
+    double b = 6784930;
+    System.out.println("a = " +a);
+    System.out.println("b = "+ b);
+  }
+}
+//------------------------------------------------------------------------------------------------------
+class P11
+{
+  public static void main(String[] args)
+  {
+    Scanner sc =new Scanner(System.in);
+    System.out.println("Enter the char :");
+    char ch = sc.next().charAt(0);
+    if( ch == 'a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+    {
+      System.out.println(ch +" is a Vowel letter.");
+    }else
+    {
+      System.out.println( ch + "is consonant.");
+    }
+  }
+}
+//----------------------------------------------------------------------------------------------------
+class P12
+{
+  public static void main(String[] args){
+  
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the first number :");
+    int a = sc.nextInt();
+    System.out.println("Enter the second number :");
+    int b = sc.nextInt();
+    System.out.println("Enter the Third number :");
+    int c= sc.nextInt();
+    System.out.println("Enter the fourth number :");
+    int d = sc.nextInt();
+    int largest = a ;
+    if(b > largest)
+    {
+        largest = b ;
+    }
+    if(c > largest)
+    {
+      largest = c ;
+    }
+    if(d > largest)
+    {
+      largest = d ;
+    }
+    System.out.println("The largest number :" + largest);
+  }
+ 
+}
+//------------------------------------------------------------------------------------------------------
+class P13
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a :");
+    int a = sc.nextInt();
+    System.out.println("Enter b :");
+    int b = sc.nextInt();
+    System.out.println("Enter c :");
+    int c= sc.nextInt();
+    int Quadratic = b * b - 4 * a * c ;
+    if(Quadratic == 0)
+  {
+    System.out.println("its equal.");
+  }else if(Quadratic > 0 ){
+    System.out.println("its real.");
+  }else
+  {
+    System.out.println("its imeginary.");
+  }
+    
+  }
+}
+//----------------------------------------------------------------------------------------------------
+class P14{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number :");
+    int num = sc.nextInt();
+    if(num > 0 )
+    {
+      System.out.println(num +" is positive.");
+    }else if (num < 0 )
+    {
+      System.out.println(num +" is negstive.");
+    }else
+    {
+      System.out.println("The number is zero");
+    }
+  }
+}
+//------------------------------------------------------------------------------------------------------
+class P15
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the charcacter :") ;
+    char ch = sc.next().charAt(0);
+    if(ch >='a' && ch <='z' || ch >= 'A' && ch <= 'Z')
+    {
+      System.out.println(ch + "is Alphabet!");
+    }else
+    {
+      System.out.println(ch + " is not Alphabet. ");
+    }
+  }
+}
+//------------------------------------------------------------------------------------------------------
+  class P16
+  {
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the positive number :");
+      int n = sc.nextInt();
+      int sum = 0 ;
+      sum =(n * (n + 1))/ 2 ;
+      System.out.println("Sum of first " + n + " natural numbers is: " + sum);
+      int smallest = 9 ;
+      int temp = sum ;
+      while (temp > 0)
+      {
+        int digit = temp % 10 ;
+        if(digit < smallest)
+        {
+          smallest = digit ;
+        }
+        temp = temp /10 ;
+      }
+      System.out.println("Smallest sum in the digit is "+smallest);  
+     }  
+  }   
+  //---------------------------------------------------------------------------------------------------
+  class P17
+  {
+    public static void main(String[] args)
+    {
+         int a = 10 ;
+         int b = 20 ;
+        int max = (a > b) ? a : b ;
+         System.out.println("The greater numberr is " + max);
+    }
+  } 
+  //-----------------------------------------------------------------------------------------------------
+  class P18
+  {
+     public static void main(String[] args)
+    {
+     Scanner sc = new Scanner(System.in);
+     System.out.println("Enter radius of large circle :");
+     double R = sc.nextDouble();
+     System.out.println("Enter radius of small cicle : ");
+     double r = sc.nextDouble();
+      double area1 = 3.14 * R * R;
+      double area2 = 3.14 * r * r;
+      double space = area1 - area2 ;
+      System.out.println("Area between the two cicles is " + space);
+
+    }
+  } 
+  //----------------------------------------------------------------------------------------------------
+   class P19
+   {
+       public static void main(String[] args)
+    {
+           int a = 5 ; 
+           int b = 6 ;
+           int M = ++a - --b ;
+           System.out.println( " Value of the M is " + M);
+             a = 5 ;  b = 6 ;
+           int N = a-- %b++;
+           System.out.println("Value of the N is "+ N);
+           a = 5 ; b = 6 ;
+           int O = a*=b+=5;
+           System.out.println("Value of the O is " + O);
+  
+           int x = 69>>>2 ;
+            System.out.println("Value of the x is " + x);
+    }
+   }              
