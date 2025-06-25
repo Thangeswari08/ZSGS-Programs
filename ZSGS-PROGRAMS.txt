@@ -934,3 +934,308 @@ class P50
 
 }
 //------------------------------------------------------------------------------------------------------
+class P51
+{
+    public static void main(String[] args) {
+        int[] nums={13,2,4,15,12,10,5};
+        int[] n1=new int[nums.length];
+        int k=0,l=0;
+        int[] n2=new int[nums.length];
+
+        for(int i=0;i<nums.length;i++)
+        {
+            if(i%2==0)
+            {
+                n1[k++]=nums[i];
+              
+            }
+            else
+            {
+                n2[l++]=nums[i];
+            }
+        }
+       for(int i=0;i<k;i++)
+       {
+        for(int j=i+1;j<k;j++)
+        {
+        if(n1[i]<n1[j])
+        {
+           int temp=n1[i];
+           n1[i]=n1[j];
+           n1[j]=temp;
+        }
+       }
+       }
+    for(int i=0;i<l;i++)
+    {
+        for(int j=i+1;j<l;j++)
+        {
+            if(n2[i]>n2[j])
+            {
+                int temp=n2[i];
+                n2[i]=n2[j];
+                n2[j]=temp;
+            }
+        }
+    }
+        int m=0;
+        for(int i=0;i<k;i++)
+        {
+            nums[m]=n1[i];
+            m=m+2;
+        }
+        m=1;
+         for(int i=0;i<l;i++)
+        {
+           nums[m]=n2[i];
+           m=m+2;
+        } 
+        for(int n:nums)
+        {
+            System.out.print(n+" ");
+        }
+
+    }
+}
+//-----------------------------------------------------------------------------------------------------
+class P52
+{
+    public static void main(String[] args) {
+        int n=4;
+        for (int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(i==0 ||j==0 || i==n-1)
+                {
+                    System.out.print("* ");
+                }
+               
+            }
+             System.out.println();
+        }
+    }
+}
+//---------------------------------------------------------------------------------------------------
+class P53
+{
+    public static void main(String[] args) {
+        int n=10;
+        int count=1;
+        int row=1;
+        while(count<=n)
+        {
+            for(int s=0;s<n-row;s++)
+            {
+                System.out.print(" ");
+            }
+
+            for(int j=0;j<row && count<=n;j++)
+            {
+                System.out.print(count+" ");
+                count++;
+            }
+            System.out.println();
+            row++;
+        }
+    }
+
+}
+//----------------------------------------------------------------------------------------------------
+class P54
+{
+    public static void main(String[] args) {
+     int n=5;
+     for(int i=1;i<=n;i++)
+     {
+        for(int j=1;j<=n;j++)
+        {
+            if(i==j)
+            {
+                System.out.print(i);
+            }
+            else if(i+j==n+1)
+            {
+                System.out.print(i);
+            }
+            else
+            {
+                System.err.print(" ");
+            }
+        }
+        System.out.println();
+     }   
+    }
+}
+//------------------------------------------------------------------------------------------------------
+class P55
+{
+    public static void main(String[] args) {
+        int n=4;
+        int size=n*2-1;
+        for(int i=0;i<size;i++)
+        {
+            for(int j=0;j<size;j++)
+            {
+                int min= Math.min(Math.min(i,j),Math.min(size-1-i,size-1-j));
+                System.out.print((n-min ) + " ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+//----------------------------------------------------------------------------------------------------
+class P56
+{
+    public static void main(String[] args) {
+        char[] word={'a','b','c'};
+        for(int i=0;i<word.length;i++)
+        {
+            for(int j=i;j<word.length;j++)
+            {
+                for(int k=i;k<=j;k++)
+                {
+                    System.out.print(word[k]);
+                }
+                System.out.println();
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------
+class P57
+{
+    public static void main(String[] args) {
+         char[] c1 = {'a','b','c','d','e','f','g','i'};
+        char[] c2 = {'a','b','d','e','e','g','g','i','i'};
+
+        int maxLength = Math.max(c1.length, c2.length);
+
+        for (int i = 0; i < maxLength; i++) {
+            char ch1 = (i < c1.length) ? c1[i] : ' ';
+            char ch2 = (i < c2.length) ? c2[i] : ' '; 
+
+            if (ch1 != ch2) {
+                System.out.print(ch1 + " , " + ch2+" ");
+            }
+    }
+}
+}
+//------------------------------------------------------------------------------------------------------
+class P58
+{
+    public static void main(String[] args) {
+       
+        int[] num1 = {9, 2, 8, 1, 3, 5, 5, 6, 7, 3, 1, 1, 6};
+        int[] num2 = {7, 8, 4, 6, 2, 1, 9, 9, 7};            
+
+        int len1 = num1.length;
+        int len2 = num2.length;
+        int max = Math.max(len1, len2);
+        int[] result = new int[max + 1];
+
+        int i = len1 - 1;
+        int j = len2 - 1;
+        int k = max;
+        int carry = 0;
+        while (i >= 0 || j >= 0) {
+            int digit1 = (i >= 0) ? num1[i] : 0;
+            int digit2 = (j >= 0) ? num2[j] : 0;
+
+            int sum = digit1 + digit2 + carry;
+            result[k] = sum % 10;
+            carry = sum / 10;
+            i--;
+            j--;
+            k--;
+        }
+        result[k] = carry;
+        for (int x = (result[0] == 0 ? 1 : 0); x < result.length; x++) {
+            System.out.print(result[x] + " ");
+        }
+    }
+}
+//----------------------------------------------------------------------------------------------------
+ class P59
+{
+    public static void main(String[] args) 
+    {
+        int boxes = 2;  
+        int height = 3; 
+
+        for (int b = 0; b < boxes; b++) 
+        {
+            System.out.println("+=====+"); 
+             for (int h = 0; h < height; h++) 
+            {
+                System.out.println("|     |"); 
+            }
+        }
+        System.out.println("+=====+"); 
+    }
+}
+//-----------------------------------------------------------------------------------------------------
+class P60
+{
+    public static void main(String[] args) {
+        String input = "WELCOMETOZOHOCOCORPORATION";
+        String word = "TOO"; 
+        int rows = 6;
+        int cols = 5;
+        char[][] grid = new char[rows][cols];
+        int index = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (index < input.length()) {
+                    grid[i][j] = input.charAt(index++);
+                } else {
+                    grid[i][j] = ' ';
+                }
+            }
+        }
+        System.out.println("Grid:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(grid[i][j] + " ");
+            }
+            System.out.println();
+        }
+        boolean found = false;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j <= cols - word.length(); j++) {
+                int k;
+                for (k = 0; k < word.length(); k++) {
+                    if (grid[i][j + k] != word.charAt(k)) {
+                        break;
+                    }
+                }
+                if (k == word.length()) {
+                    System.out.println("Start index: <" + i + "," + j + ">");
+                    System.out.println("End index: <" + i + "," + (j + k - 1) + ">");
+                    found = true;
+                }
+            }
+        }
+        for (int i = 0; i <= rows - word.length(); i++) {
+            for (int j = 0; j < cols; j++) {
+                int k;
+                for (k = 0; k < word.length(); k++) {
+                    if (grid[i + k][j] != word.charAt(k)) {
+                        break;
+                    }
+                }
+                if (k == word.length()) {
+                    System.out.println("Start index: <" + i + "," + j + ">");
+                    System.out.println("End index: <" + (i + k - 1) + "," + j + ">");
+                    found = true;
+                }
+            }
+        }
+        if (!found) {
+            System.out.println("Word not found");
+        }
+    }
+}
+//----------------------------------------------------------------------------------------------------
+                    
